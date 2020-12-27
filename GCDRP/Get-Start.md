@@ -58,7 +58,7 @@ App Secret信息用于验证接入开放平台的App的身份和数据，该值�
 
 ### 查看API
 
-开发者可在平台开放的[API Swagger](https://gcdrp.zhongshihudong.com ':ignore :target=_blank')页面查看平台开放的Api细节。（如Api有特殊说明，可在本文档站点找到相关内容。）
+开发者可在平台开放的[API Swagger](https://gcdrp.zhongshihudong.com/swagger ':ignore :target=_blank')页面查看平台开放的Api细节。（如Api有特殊说明，可在本文档站点找到相关内容。）
 
 ### API调用方式
 
