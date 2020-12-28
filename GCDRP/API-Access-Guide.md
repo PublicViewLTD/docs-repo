@@ -45,6 +45,7 @@
 1. 可选参数不计入运算，此外备注中如有特殊标注的参数亦不计入运算。
 2. 在运算数字格式时，如数字无小数，请不要携带小数点后位数。（部分编程语言中，`float`格式的`10`默认转字符串会得到`"10.00"`，这会导致签名校验失败，应改为`"10"`）
 
+> 用于开发调试用途，该页面提供了计算签名的计算器：[https://gcdrp.zhongshihudong.com/Developer/Utils/SignCalculator](https://gcdrp.zhongshihudong.com/Developer/Utils/SignCalculator ':ignore :target=_blank')
 
 ### WebAPI 版本问题
 
