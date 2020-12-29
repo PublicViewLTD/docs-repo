@@ -5,3 +5,4 @@
 * [API接入指南](/API-Access-Guide)
 * API参考
     * [API Swagger](https://gcdrp.zhongshihudong.com/swagger ':ignore :target=_blank') 
+    * [推送垃圾数据](/APIs/PushGarbageData)
