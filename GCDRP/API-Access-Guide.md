@@ -69,3 +69,12 @@ Hello world! 1.0
 ```
 
 > 具体版本信息及对应Api内容请以Swagger为准
+
+
+### 通过Header传递验证信息
+
+为了规范实施Restful，有时候我们不方便在Body中使用Json传递基础验证信息。如在使用GET方法时，在Body中携带Json是不规范的。
+
+为了应对这种情况，在部分API是，我们在Http Header中传递验证信息(`app`,`secret`,`nonce`,`sign`, `time`).
+
+> 如果Swagger中某个Api在`Request body`中包含了验证信息，则使用json方式传递验证信息。否则使用`header`传递验证信息。
