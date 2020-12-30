@@ -1,4 +1,4 @@
-# API 错误码
+# API 通用错误码
 
 ``` lua
 errCode = {
