@@ -87,7 +87,20 @@ Web API分为两种验证形式：
 
 其中在不同的参数编排格式中，`Body`中传递的数据格式略有不同.
 
+### Web Api请求签名规则
 
+**动态参数** ： 将`数据主体` 内的所有**必须字段**的数据**按照次序**拼接为字符串。
+
+1. 获取`动态参数`字符串
+2. 在`动态参数`字符串后方拼接`Secret`（Hash之前的原始文本），得到新字符串，记作“Secret参数”
+3. 将`Secret参数`计算获取其**小写16位**MD5，得到`签名`
+
+**签名参数计算注意事项**：
+
+1. 可选参数不计入运算，此外备注中如有特殊标注的参数亦不计入运算。
+2. 在运算数字格式时，如数字无小数，请不要携带小数点后位数。（部分编程语言中，`float`格式的`10`默认转字符串会得到`"10.00"`，这会导致签名校验失败，应改为`"10"`）
+
+例如 [Hello World的API](/API/Hello?id=post-apihello ':target=_blank')中，需要对`greet`参数后拼接`Secret`文本，然后对其取16位小写MD5.
 
 <br>
 
@@ -97,7 +110,7 @@ Web API分为两种验证形式：
 
 ## MessagePack
 
-本平台推荐使用`MessagePack`替代`JSON`作为数据编排格式，本平台不再提供`JSON`格式的支持。
+本平台推荐使用`MessagePack`替代`JSON`作为数据编排格式，本平台不提供`JSON`格式的支持。
 
 MessagePack是`JSON`的下一代替代品，可通过官网了解其信息: [MessagePack: It's like JSON. but fast and small. (msgpack.org)](https://msgpack.org/)
 
@@ -107,4 +120,13 @@ MessagePack是`JSON`的下一代替代品，可通过官网了解其信息: [Mes
 
 使用MessagePack格式请求WebAPI方法时，请携带Http头`Accept`和`Content-Type`为`application/x-msgpack`.
 
-​	
+<br>
+
+## Protocol Buffer
+
+Protocol Buffer是一种相较于`MessagePack`更为流行的多平台、多语言、高性能的数据序列化机制，本平台向暂时不适应`MessagePack`的开发者提供了`Protocol Buffer`格式.
+
+**内容协商**
+
+使用MessagePack格式请求WebAPI方法时，请携带Http头`Accept`和`Content-Type`为`application/x-protobuf`.
+
