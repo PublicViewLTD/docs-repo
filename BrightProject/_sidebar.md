@@ -9,3 +9,5 @@
 - API
     - [Swagger](/API/Swagger)
     - [Hello World](/API/Hello)
+    - [地产区域](/API/Estates)
+    - [推送垃圾采集数据](/API/Garbages)
