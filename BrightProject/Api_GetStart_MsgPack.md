@@ -271,7 +271,7 @@ namespace PublicView
 
             try
             {
-                var response = await "https://localhost:5001".AppendPathSegment("/api/Hello")
+                var response = await "https://bright.ljflytjl.cn:9101".AppendPathSegment("/api/Hello")
                     .WithHeader("Content-Type", "application/x-msgpack")
                     .WithHeader("Accept", "application/x-msgpack")
                     .PostAsync(new ByteArrayContent(MessagePackSerializer.Serialize(c2s_dto)));
