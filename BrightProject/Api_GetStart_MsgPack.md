@@ -1,6 +1,6 @@
 # MessagePack接入指引
 
-接下来演示使用MessagePack数据编排格式以接入本平台。
+下文演示使用MessagePack数据编排格式以接入本平台。
 
 本文所用实例接口详见API文档: [Hello World](/API/Hello)
 
