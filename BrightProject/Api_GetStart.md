@@ -47,8 +47,6 @@ Web API分为两种验证形式：
 
 ![image-20210518174403519](Api_GetStart.assets/image-20210518174403519.png)
 
-!> Api Secret原始值请在设置时妥善保管，丢失后无法找回。
-
 创建完成后，我们将在页面中得到需要的账户ID信息和Secret Hash信息：
 
 ![image-20210518174728179](Api_GetStart.assets/image-20210518174728179.png)
@@ -79,8 +77,6 @@ Web API分为两种验证形式：
 
 
 
-
-
 ### Web API验证方式
 
 本平台Web API采用RESTFUL设计风格，对于`GET`、`DELETE` 等通常不在`Body`中携带参数的HTTP方法，将在HTTP请求`header`中验证所需的验证数据；对于`POST`等通常在`Body`中携带参数的HTTP方法，将在HTTP请求的`Body`中验证所需的数据。
@@ -100,15 +96,13 @@ Web API分为两种验证形式：
 1. 可选参数不计入运算，此外备注中如有特殊标注的参数亦不计入运算。
 2. 在运算数字格式时，如数字无小数，请不要携带小数点后位数。（部分编程语言中，`float`格式的`10`默认转字符串会得到`"10.00"`，这会导致签名校验失败，应改为`"10"`）
 
-例如 [Hello World的API](/API/Hello?id=post-apihello ':target=_blank')中，需要对`greet`参数后拼接`Secret`文本，然后对其取16位小写MD5.
-
 <br>
 
 <br>
 
 
 
-## MessagePack
+<!-- ## MessagePack
 
 本平台推荐使用`MessagePack`替代`JSON`作为数据编排格式，本平台不提供`JSON`格式的支持。
 
@@ -128,5 +122,5 @@ Protocol Buffer是一种相较于`MessagePack`更为流行的多平台、多语�
 
 **内容协商**
 
-使用MessagePack格式请求WebAPI方法时，请携带Http头`Accept`和`Content-Type`为`application/x-protobuf`.
+使用MessagePack格式请求WebAPI方法时，请携带Http头`Accept`和`Content-Type`为`application/x-protobuf`. -->
 

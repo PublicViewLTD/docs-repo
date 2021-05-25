@@ -12,6 +12,6 @@ Swagger页面地址为: [https://bright.ljflytjl.cn:9101/swagger](https://bright
     - 部分接口不会出现在Swagger页面上
     - Swagger页面的调试功能完全不可用
     - Swagger页面所描述的`Media type`与实际支持类型有出入
-    - Swagger页面所显示的Dto在部分数据格式下与实际返回内容不符，如分页查询API返回的分页数据，在`XML`模式时为`index`、`total`、`count`等，而`MessagePack`模式则返回为`PageIndex`、`TotalPages`、`ItemCount`等.
-3. Swagger仅供参考，实际请以API文档说明为准。
-4. 使用Protocol buffer格式接入时，按照swagger所呈现的dto格式编写`.proto`文件即可，版本为`syntax = "proto3";`，平台内部没有使用`.proto`文件而使用特殊方法`JIT`生成了相关内容，故无法提供`.proto`文件.
+    - Swagger页面所显示的Dto在部分数据格式下与实际返回内容不符
+3. Swagger仅供参考，实际请以本文档说明为准。
+4. 使用Protocol buffer格式接入时，按照swagger所呈现的dto格式编写`.proto`文件即可，版本为`syntax = "proto3";`，平台内部没有使用`.proto`文件而使用特殊方法`JIT`生成了相关内容，我们也没有proto文件，故无法提供`.proto`文件.
